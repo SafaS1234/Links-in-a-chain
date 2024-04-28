@@ -6,4 +6,4 @@ This lab has a data structure that stores a list of ChainLink objects. The user 
 ## Getting Started
 
 ### Set Up
-Open and run in vs code (use main.cpp)
+Open and run in vs code.
