@@ -1,5 +1,4 @@
 #include <iostream>
-//#include <cstddef>
 #include <string>
 
 using namespace std;
@@ -8,11 +7,18 @@ class ChainLink {
     private:
       string color;
     public:
-      ChainLink(string color) {
+      ChainLink()
+      {
+        color = "";
+      }
+
+      ChainLink(string color)
+      {
         this->color = color;
       }
 
-      string get_color() {
+      string get_color() 
+      {
         return this->color;
       }
 
@@ -48,14 +54,14 @@ int main()
   Node* node_three = new Node(link_three, node_two);
 
   // // Returns the first ChainLink in the list
-  // Node* retrieved_node = node_one;
-  // ChainLink retrieved_link = retrieved_node->data;
-  // cout << " First ChainLink: " << retrieved_link.get_color() << endl;
+  Node* retrieved_node = node_one;
+  ChainLink retrieved_link = retrieved_node->data;
+  cout << " First ChainLink: " << retrieved_link.get_color() << endl;
 
   // Returns the second ChainLink in the list
-  Node* retrieved_node = node_one->next;
-  ChainLink retrieved_link = retrieved_node->data;
-  cout << " Second ChainLink: " << retrieved_link.get_color() << endl;
+  Node* retrieved_node2 = node_one->next;
+  ChainLink retrieved_link2 = retrieved_node2->data;
+  cout << " Second ChainLink: " << retrieved_link2.get_color() << endl;
 
   // Returns the third ChainLink in the list
   Node* another_retrieved_node = node_one->next->next;
